@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { MagnifyingGlass, X } from "lucide-react";
+import { Search, X } from "lucide-react";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -46,7 +46,7 @@ const SearchBar = () => {
         className="absolute right-2 top-1/2 transform -translate-y-1/2"
         onClick={handleClear}
       >
-        {query ? <X className="h-4 w-4" /> : <MagnifyingGlass className="h-4 w-4" />}
+        {query ? <X className="h-4 w-4" /> : <Search className="h-4 w-4" />}
       </Button>
       {showSuggestions && (
         <Popover>
